@@ -26,7 +26,7 @@ $soups = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                 <div class="collection">
                     <?php  foreach ($soups as $soup) { ?>
                     <a href="soups_view.php?soup_id=<?php echo $soup['soup_id'] ?>" class="collection-item lime-text text-darken-4"><?php echo $soup ['soup_name']?> <br>
-                    <span><em><?php echo $soup ['author'] . $soup ['timestamp']?></em></span>
+                    <span><em><?php echo $soup ['author'] ." ". $soup ['timestamp']?></em></span>
                     </a>
                    <?php } ?>
                 </div>
