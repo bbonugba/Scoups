@@ -1,5 +1,5 @@
 <footer>
-    <h6 class="cyan accent-4 white-text center">&copy2024</h6>
+    <h6 class="lime darken-3 white-text center">&copy2024</h6>
 
     <script src="js/jquery.js"></script>
     <script src="js/materialize.js"></script>
