@@ -1,3 +1,4 @@
+<?php include('Templates/connect.php')  ?>
 <?php include('Templates/header.php')  ?>
 
 <!DOCTYPE html>
