@@ -6,7 +6,7 @@ $fetch_query = "SELECT * FROM `soups_tb`";
 $send_fetch_query = mysqli_query($connection, $fetch_query);
 
 $soups = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
-print_r($soups);
+// print_r($soups);
 
 ?>
 
@@ -24,10 +24,11 @@ print_r($soups);
                 <h2 class="grey-text text-darken-2">Welcome to Scoups!</h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, reprehenderit corporis! Recusandae, magni sed vel magnam provident iusto quis laboriosam, esse, ratione fugiat consequuntur unde voluptate dolore temporibus voluptas molestias. Placeat vero officiis, perspiciatis mollitia, quae beatae, sed odit recusandae quasi vitae id. Ducimus, magnam consequatur nostrum quae reiciendis quas?</p>
                 <div class="collection">
-                    <a href="" class="collection-item lime-text text-darken-4">Onugbu</a>
-                    <a href="" class="collection-item lime-text text-darken-4">Orah</a>
-                    <a href="" class="collection-item lime-text text-darken-4">Afang</a>
-                    <a href="" class="collection-item lime-text text-darken-4">Edikang-Ikong</a>
+                    <?php  foreach ($soups as $soup) { ?>
+                    <a href="soups_view.php?soup_id=<?php echo $soup['soup_id'] ?>" class="collection-item lime-text text-darken-4"><?php echo $soup ['soup_name']?> <br>
+                    <span><em><?php echo $soup ['author'] . $soup ['timestamp']?></em></span>
+                    </a>
+                   <?php } ?>
                 </div>
             </div>
         </section>
