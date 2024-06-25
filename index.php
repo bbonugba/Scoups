@@ -1,6 +1,15 @@
 <?php include('Templates/connect.php')  ?>
 <?php include('Templates/header.php')  ?>
 
+<?php
+$fetch_query = "SELECT * FROM `soups_tb`";
+$send_fetch_query = mysqli_query($connection, $fetch_query);
+
+$soups = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
+print_r($soups);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
